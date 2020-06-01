@@ -34,3 +34,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Rubymine
+.rakeTasks
+.generators
+.idea/*
+
+.DS_Store

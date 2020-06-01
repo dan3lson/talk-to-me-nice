@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :messages, dependent: :destroy
 
-  NAME_REGEX = /\w+/
+  NAME_REGEX = /\w+/.freeze
 
   validates :username,
             presence: true,

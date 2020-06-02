@@ -3,6 +3,8 @@
 A traditional Rails app where users can sign up and chat with one another
 in real time. This is done with Action Cable and its usage of WebSockets.
 
+![Chat App via Action Cable](public/demo.gif)
+
 Things to note:
 
 * Ruby version: 2.7.3

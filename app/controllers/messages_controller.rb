@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
     message = current_user.messages.build(message_params)
 
     if message.save
-      redirect_to messages_url
+      ActionCable.server.broadcast('room_channel', message: render_message(message))
     else
       render :index
     end
@@ -22,6 +22,10 @@ class MessagesController < ApplicationController
   def get_messages
     @messages = Message.recent
     @message  = current_user.messages.build
+  end
+
+  def render_message(message)
+    render(partial: 'message', locals: { message: message })
   end
 
   def message_params

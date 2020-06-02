@@ -1,24 +1,19 @@
-# README
+# Talk to Me Nice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A traditional Rails app where users can sign up and chat with one another
+in real time. This is done with Action Cable and its usage of WebSockets.
 
-Things you may want to cover:
+Things to note:
 
-* Ruby version
+* Ruby version: 2.7.3
+* Rails version: 6.0.3
+* Postgresql database
 
-* System dependencies
+To run this repo locally:
+- clone it
+- `bundle install`
+- `rails db:create`
+- `rails db:migrate`
+- `rails db:seed`, if you want to jump right in with two dummy users
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run the lite test suite with `bundle exec rspec`
